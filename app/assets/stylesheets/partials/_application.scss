@@ -1,0 +1,19 @@
+body {
+  font-size: 14px;
+  padding-top: 100px;
+
+  .jumbotron {
+    top: -50px;
+    position: relative;
+  }
+}
+
+.footer {
+  background-color: #f5f5f5;
+  bottom: 0;
+  font-size: 12px;
+  height: 60px;
+  line-height: 30px;
+  position: absolute;
+  width: 100%;
+}

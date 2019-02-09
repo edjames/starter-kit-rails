@@ -1,0 +1,24 @@
+doctype html
+html lang="en" class="h-100"
+
+  head
+    meta charset="utf-8"
+    meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_pack_tag 'application'
+
+    title Jumbotron Template · Bootstrap
+
+  body.d-flex.flex-column.h-100
+    = render partial: 'layouts/navigation'
+
+    main.flex-shrink-0
+      = yield :jumbotron
+
+    footer.footer.mt-auto.py-3
+      .container
+        .text-muted
+          | &copy; Skeleton Tech Ltd #{Date.today.year}
