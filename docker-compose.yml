@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  db:
+    container_name: 'skeleton-db'
+    environment:
+      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=postgres
+    image: postgres:9.6-alpine
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '1'
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - ./db/postgres/data:/var/lib/postgresql/data
+      - ./db/templates/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh

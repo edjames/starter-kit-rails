@@ -9,11 +9,11 @@ default: &default
 
 development:
   <<: *default
-  database: skeleton_development
+  database: skeleton-dev
 
 test:
   <<: *default
-  database: skeleton_test
+  database: skeleton-test
 
 production:
   <<: *default
