@@ -1,7 +1,26 @@
-# README
+# Skeleton Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a starter Rails application with everything you need to properly bootstrap a useful Rails application.
+
+## Components
+
+This is a fully self-contained application with backend stack.
+
+### Backend
+
+- Docker compose file with convenience scripts to start/stop the stack
+- Postgres / Redis / Memcached
+- Sidekiq
+- Clockwork
+
+### Application
+
+- Devise
+- Slim templates
+- Webpack with Vue.js
+- Bootstrap 4.x
+
+---
 
 Things you may want to cover:
 
