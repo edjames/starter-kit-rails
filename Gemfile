@@ -7,6 +7,7 @@ gem 'rails', '~> 5.2.2'
 gem 'bootsnap', require: false
 gem 'jbuilder'
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'pghero'
 gem 'puma'
 gem 'sass-rails'
 gem 'sidekiq'

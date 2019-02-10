@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  mount Sidekiq::Web => '/sidekiq'
+  mount PgHero::Engine, at: '/pghero'
+  mount Sidekiq::Web,   at: '/sidekiq'
 
   root to: 'home#index'
 
