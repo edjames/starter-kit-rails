@@ -15,5 +15,11 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
           a.dropdown-item href="#"  Another action
           a.dropdown-item href="#"  Something else here
     ul.navbar-nav.ml-auto
-      li.nav-item
-        a.nav-link href="#"  Link 1
+      - if user_signed_in?
+        li.nav-item
+          = link_to destroy_user_session_path, class: 'nav-link' do
+            | Sign out
+      - else
+        li.nav-item
+          = link_to new_user_session_path, class: 'nav-link' do
+            | Sign in

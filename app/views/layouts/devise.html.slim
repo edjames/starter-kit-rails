@@ -10,16 +10,13 @@ html lang="en" class="h-100"
     = javascript_include_tag 'application'
     = javascript_pack_tag 'application'
 
-    / = stylesheet_pack_tag 'hello_vue'
-    / = javascript_pack_tag 'hello_vue'
-
     title Skeleton
 
   body.d-flex.flex-column.h-100
-    = render partial: 'layouts/navigation'
-
-    main.flex-shrink-0
-      = yield :jumbotron
+    .container
+      .row.justify-content-center
+        .col-4
+          = yield
 
     footer.footer.mt-auto.py-3
       .container
