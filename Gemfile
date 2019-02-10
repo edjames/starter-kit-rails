@@ -9,11 +9,11 @@ gem 'jbuilder'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma'
 gem 'sass-rails'
+gem 'sidekiq'
 gem 'slim-rails'
 gem 'uglifier'
 gem 'webpacker'
 
-# gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do

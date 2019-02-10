@@ -17,3 +17,19 @@ services:
     volumes:
       - ./db/postgres/data:/var/lib/postgresql/data
       - ./db/templates/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+
+  redis:
+    container_name: 'skeleton-redis'
+    image: redis:5.0.3-alpine
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '1'
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
