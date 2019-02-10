@@ -1,0 +1,16 @@
+/*
+ * Yarn
+ *
+ *= require bootstrap/dist/css/bootstrap
+ *= require jquery-datetimepicker/build/jquery.datetimepicker.min
+ *
+ * Internal
+ *
+ * require_self
+ */
+
+/*Font Awesome.*/
+$fa-font-path: '/assets/font-awesome/fonts';
+@import 'font-awesome/scss/font-awesome';
+
+@import 'partials/application';
