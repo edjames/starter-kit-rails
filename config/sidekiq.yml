@@ -1,0 +1,4 @@
+:schedule:
+  skeleton:
+    every: 1m
+    class: SkeletonWorker

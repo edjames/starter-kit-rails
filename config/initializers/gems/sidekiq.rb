@@ -1,4 +1,6 @@
 require 'sidekiq/web'
+require 'sidekiq-scheduler/web'
+
 Sidekiq::Web.set :sessions, false
 
 log_level = ENV.fetch('WORKER_LOG_LEVEL', 'warn').upcase
