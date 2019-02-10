@@ -1,0 +1,85 @@
+h2
+  | Calendar date
+  hr
+
+dl.row
+  dt.col-sm-3 Name
+  dd.col-sm-9 value
+
+  dt.col-sm-3 Date actual
+  dd.col-sm-9 = @resource.date_actual
+
+  dt.col-sm-3 Epoch
+  dd.col-sm-9 = number_with_delimiter(@resource.epoch)
+
+  dt.col-sm-3 Day suffix
+  dd.col-sm-9 = @resource.day_suffix
+
+  dt.col-sm-3 Day name
+  dd.col-sm-9 = @resource.day_name
+
+  dt.col-sm-3 Day of week
+  dd.col-sm-9 = @resource.day_of_week
+
+  dt.col-sm-3 Day of month
+  dd.col-sm-9 = @resource.day_of_month
+
+  dt.col-sm-3 Day of quarter
+  dd.col-sm-9 = @resource.day_of_quarter
+
+  dt.col-sm-3 Day of year
+  dd.col-sm-9 = @resource.day_of_year
+
+  dt.col-sm-3 Week of month
+  dd.col-sm-9 = @resource.week_of_month
+
+  dt.col-sm-3 Week of year
+  dd.col-sm-9 = @resource.week_of_year
+
+  dt.col-sm-3 Week of year_iso
+  dd.col-sm-9 = @resource.week_of_year_iso
+
+  dt.col-sm-3 Month actual
+  dd.col-sm-9 = @resource.month_actual
+
+  dt.col-sm-3 Month name
+  dd.col-sm-9 = @resource.month_name
+
+  dt.col-sm-3 Month name short
+  dd.col-sm-9 = @resource.month_name_short
+
+  dt.col-sm-3 Quarter actual
+  dd.col-sm-9 = @resource.quarter_actual
+
+  dt.col-sm-3 Quarter name
+  dd.col-sm-9 = @resource.quarter_name
+
+  dt.col-sm-3 Year actual
+  dd.col-sm-9 = @resource.year_actual
+
+  dt.col-sm-3 First day of week
+  dd.col-sm-9 = @resource.first_day_of_week
+
+  dt.col-sm-3 Last day of week
+  dd.col-sm-9 = @resource.last_day_of_week
+
+  dt.col-sm-3 First day of month
+  dd.col-sm-9 = @resource.first_day_of_month
+
+  dt.col-sm-3 Last day of month
+  dd.col-sm-9 = @resource.last_day_of_month
+
+  dt.col-sm-3 First day of quarter
+  dd.col-sm-9 = @resource.first_day_of_quarter
+
+  dt.col-sm-3 Last day of quarter
+  dd.col-sm-9 = @resource.last_day_of_quarter
+
+  dt.col-sm-3 First day of year
+  dd.col-sm-9 = @resource.first_day_of_year
+
+  dt.col-sm-3 Last day of year
+  dd.col-sm-9 = @resource.last_day_of_year
+
+  dt.col-sm-3 Weekend
+  dd.col-sm-9 = @resource.weekend

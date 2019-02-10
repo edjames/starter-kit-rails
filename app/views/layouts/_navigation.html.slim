@@ -1,5 +1,5 @@
 nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
-  a.navbar-brand href="#"  Skeleton
+  = link_to 'Skeleton', root_path, class: 'navbar-brand'
   button.navbar-toggler aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarsExampleDefault" data-toggle="collapse" type="button"
     span.navbar-toggler-icon
   #navbarsExampleDefault.collapse.navbar-collapse
@@ -9,11 +9,9 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
       li.nav-item
         a.nav-link href="/sidekiq" target="blank" Sidekiq
       li.nav-item.dropdown
-        a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Dropdown
+        a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Data
         .dropdown-menu aria-labelledby="dropdown01"
-          a.dropdown-item href="#"  Action
-          a.dropdown-item href="#"  Another action
-          a.dropdown-item href="#"  Something else here
+          = link_to 'Calendar dates', calendar_dates_path, class: 'dropdown-item'
     ul.navbar-nav.ml-auto
       - if user_signed_in?
         li.nav-item

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     mount Sidekiq::Web,   at: '/sidekiq'
   end
 
+  resources :calendar_dates, only: %i[index show]
+
   root to: 'home#index'
 
 end

@@ -1,0 +1,31 @@
+h2
+  | Calendar dates
+  hr
+
+- if @collection.empty?
+
+  p No calendar dates found.
+
+- else
+
+  table.table.table-striped.table-hover.table-sm
+    thead
+      tr
+        th ID
+        th Date actual
+        th Epoch
+        th Day name
+        th
+    tbody
+      - @collection.each do |resource|
+        tr
+          td
+            code = resource.id
+          td
+            code = resource.date_actual
+          td
+            code = number_with_delimiter(resource.epoch)
+          td = resource.day_name
+          td = link_to 'Show', calendar_date_path(resource)
+
+  == pagy_bootstrap_nav(@pagy)

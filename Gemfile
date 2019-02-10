@@ -7,6 +7,7 @@ gem 'rails', '~> 5.2.2'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder'
+gem 'pagy'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'pghero'
 gem 'puma'
