@@ -7,7 +7,3 @@ h1.h3.mb-3.font-weight-normal Please sign in
     = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
   .form-actions
     = f.button :submit, 'Sign in', class: 'btn btn-lg btn-primary btn-block'
-
-hr
-
-= render "devise/shared/links"

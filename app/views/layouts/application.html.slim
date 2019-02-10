@@ -21,6 +21,26 @@ html lang="en" class="h-100"
     main.flex-shrink-0
       = yield :jumbotron
 
+    .container
+      - if flash.notice
+        div.alert.alert-success.alert-dismissible.fade.show
+          button.close data-dismiss='alert'
+            span
+              | &times;
+          strong Success!
+          | &nbsp;
+          = flash.notice
+      - if flash.alert
+        div.alert.alert-danger.alert-dismissible.fade.show
+          button.close data-dismiss='alert'
+            span
+              | &times;
+          strong Oops!
+          | &nbsp;
+          = flash.alert
+
+    = yield
+
     footer.footer.mt-auto.py-3
       .container
         .text-muted

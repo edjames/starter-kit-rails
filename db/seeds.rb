@@ -17,7 +17,7 @@ def create_user_seed(params)
   if User.where(email: params[:email]).exists?
     add_message "#{params[:name]} already exists."
   else
-    pw = 'Changeme1'
+    pw = ENV.fetch('DEFAULT_USER_PASSWORD')
     User.create!(params.merge({ password: pw, password_confirmation: pw }))
     add_message "Created user #{params[:name]}. Password: #{pw}"
   end
@@ -29,8 +29,7 @@ end
 
 notify 'Creating User seeds'
 [
-  { name: 'Jim Beam', email: 'jim@example.com' },
-  { name: 'Jack Daniels', email: 'jack@example.com' }
+  { name: ENV.fetch('DEFAULT_USER_NAME'), email: ENV.fetch('DEFAULT_USER_EMAIL') }
 ].each { |user| create_user_seed(user) }
 
 puts; puts 'rake db:seed summary:'
