@@ -4,12 +4,18 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bootstrap": "^4.2.1",
+    "caniuse-lite": "^1.0.30000697",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery-datetimepicker": "^2.5.4",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "popper.js": "^1.14.6",
+    "vue": "^2.6.4",
+    "vue-loader": "14.2.2",
+    "vue-template-compiler": "^2.6.4"
   },
   "devDependencies": {
+    "webpack": "^3.0.0",
     "webpack-dev-server": "2.11.2"
   }
 }
