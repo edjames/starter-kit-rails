@@ -1,5 +1,5 @@
 # !/bin/sh
-# teardown.sh
+# teardown
 
 main() {
   ./bin/stack/stop.sh

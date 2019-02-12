@@ -1,5 +1,5 @@
 # !/bin/sh
-# stop.sh
+# stop
 
 main() {
   # Bring 'er down!
