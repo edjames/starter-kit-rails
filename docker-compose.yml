@@ -18,6 +18,17 @@ services:
       - ./db/postgres/data:/var/lib/postgresql/data
       - ./db/templates/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
 
+  memcached:
+    container_name: 'skeleton-memcached'
+    image: memcached:1.5-alpine
+    logging:
+      options:
+        max-size: '10m'
+        max-file: '1'
+    ports:
+      - "11211:11211"
+    restart: unless-stopped
+
   redis:
     container_name: 'skeleton-redis'
     image: redis:5.0.3-alpine

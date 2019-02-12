@@ -62,6 +62,7 @@ GEM
     concurrent-ruby (1.1.4)
     connection_pool (2.2.2)
     crass (1.0.4)
+    dalli (2.7.9)
     devise (4.6.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -237,6 +238,7 @@ DEPENDENCIES
   bootsnap
   byebug
   capybara (>= 2.15)
+  dalli
   devise
   dotenv-rails
   foreman

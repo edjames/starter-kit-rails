@@ -5,6 +5,7 @@ ruby '2.6.1'
 gem 'rails', '~> 5.2.2'
 
 gem 'bootsnap', require: false
+gem 'dalli'
 gem 'devise'
 gem 'jbuilder'
 gem 'pagy'
