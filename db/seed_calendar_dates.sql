@@ -33,7 +33,8 @@ SELECT TO_CHAR(datum,'yyyymmdd')::INT AS id,
        CASE
          WHEN EXTRACT(isodow FROM datum) IN (6,7) THEN TRUE
          ELSE FALSE
-       END AS weekend
+       END AS weekend,
+       now() as created_at
 FROM (SELECT '1970-01-01'::DATE+ SEQUENCE.DAY AS datum
       FROM GENERATE_SERIES (0,29219) AS SEQUENCE (DAY)
       GROUP BY SEQUENCE.DAY) DQ

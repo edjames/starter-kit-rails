@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_10_142414) do
+ActiveRecord::Schema.define(version: 2019_02_12_130945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_02_10_142414) do
     t.date "first_day_of_year", null: false
     t.date "last_day_of_year", null: false
     t.boolean "weekend"
+    t.datetime "created_at"
     t.index ["date_actual"], name: "index_calendar_dates_on_date_actual"
   end
 
