@@ -1,0 +1,23 @@
+h3 User Details
+
+hr
+
+.row
+  .col-md-9
+    = simple_form_for @resource, url: path do |f|
+
+      = f.input :name, placeholder: 'John Doe'
+      = f.input :email, placeholder: 'john.doe@example.com'
+
+      hr
+
+      - if action_name == 'edit'
+        = f.input :password, hint: 'To keep the current password leave the password fields blank.'
+      - else
+        = f.input :password
+      = f.input :password_confirmation
+
+      hr
+
+      = f.button :submit, 'Save'
+      = link_to 'Cancel', path, class: 'cancel'

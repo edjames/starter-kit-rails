@@ -6,4 +6,10 @@ class User < ApplicationRecord
          :rememberable,
          :trackable,
          :validatable
+
+
+  validates :name, presence: true
+
+  scope :ordered, -> { order(name: :asc) }
+
 end
