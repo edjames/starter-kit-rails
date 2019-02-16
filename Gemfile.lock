@@ -45,6 +45,7 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
+    awesome_print (1.8.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
     bootsnap (1.3.2)
@@ -59,6 +60,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.2)
       xpath (~> 3.2)
+    coderay (1.1.2)
     concurrent-ruby (1.1.4)
     connection_pool (2.2.2)
     crass (1.0.4)
@@ -77,6 +79,7 @@ GEM
     et-orbi (1.1.7)
       tzinfo
     execjs (2.7.0)
+    ffaker (2.10.0)
     ffi (1.10.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -117,6 +120,12 @@ GEM
     pg (1.1.4)
     pghero (2.2.0)
       activerecord
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-byebug (3.6.0)
+      byebug (~> 10.0)
+      pry (~> 0.10)
     public_suffix (3.0.3)
     puma (3.12.0)
     raabro (1.1.6)
@@ -235,18 +244,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootsnap
   byebug
   capybara (>= 2.15)
   dalli
   devise
   dotenv-rails
+  ffaker
   foreman
   jbuilder
   listen (>= 3.0.5, < 3.2)
   pagy
   pg (>= 0.18, < 2.0)
   pghero
+  pry-byebug
   puma
   rails (~> 5.2.2)
   sass-rails

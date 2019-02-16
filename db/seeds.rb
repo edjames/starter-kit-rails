@@ -28,9 +28,11 @@ end
 #
 
 notify 'Creating User seeds'
-[
-  { name: ENV.fetch('DEFAULT_USER_NAME'), email: ENV.fetch('DEFAULT_USER_EMAIL') }
-].each { |user| create_user_seed(user) }
+users = [{ name: ENV.fetch('DEFAULT_USER_NAME'), email: ENV.fetch('DEFAULT_USER_EMAIL') }]
+30.times do
+  users << { name: FFaker::Name.name, email: FFaker::Internet.email }
+end
+users.each { |user| create_user_seed(user) }
 
 puts; puts 'rake db:seed summary:'
 @messages.each { |m| puts m }

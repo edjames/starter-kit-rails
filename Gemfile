@@ -20,11 +20,12 @@ gem 'slim-rails'
 gem 'uglifier'
 gem 'webpacker'
 
-# gem 'bcrypt', '~> 3.1.7'
-
 group :development, :test do
+  gem 'awesome_print'
   gem 'byebug'
   gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'ffaker'
+  gem 'pry-byebug'
 end
 
 group :development do
