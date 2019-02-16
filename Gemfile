@@ -24,7 +24,11 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug'
   gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'factory_bot_rails'
   gem 'ffaker'
+  gem 'growl'
+  gem 'guard'
+  gem 'guard-minitest'
   gem 'pry-byebug'
 end
 
@@ -38,4 +42,6 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
+  gem 'minitest-reporters'
+  gem 'mocha'
 end

@@ -1,6 +1,15 @@
 require 'test_helper'
-class SkeletonWorkerTest < MiniTest::Unit::TestCase
-  def test_example
-    skip "add some examples to (or delete) #{__FILE__}"
+
+class SkeletonWorkerTest < Minitest::Test
+  def test_perform_default
+    worker = SkeletonWorker.new
+    worker.expects(:sleep).with(5)
+    worker.perform
+  end
+
+  def test_perform
+    worker = SkeletonWorker.new
+    worker.expects(:sleep).with(10)
+    worker.perform(10)
   end
 end
