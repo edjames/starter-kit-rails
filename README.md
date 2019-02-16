@@ -1,43 +1,63 @@
 # Skeleton Application
 
-This is a starter Rails application with everything you need to properly bootstrap a useful Rails application.
+This is a starter Rails application with everything you need to properly bootstrap a useful Rails application. This is a fully self-contained application with backend stack.
 
-## Components
+## Prerequisites
 
-This is a fully self-contained application with backend stack.
+You need to have the following installed before you can run this application:
 
-### Backend
+- [Docker for Mac](https://docs.docker.com/docker-for-mac/)
+- Ruby 2.6.1
+- Node 10.15.1
 
-- Docker compose file with convenience scripts to start/stop the stack
-- Postgres / Redis / Memcached
-- Sidekiq
-- Clockwork
+[asdf](https://github.com/asdf-vm/asdf) is the recommended version manager for Ruby and Node.
 
-### Application
+### Backend / Docker scripts
 
-- Devise
-- Slim templates
-- Webpack with Vue.js
-- Bootstrap 4.x
+The backed services are configured in the `docker-compose.yml` file. These services are controlled via some convenience scripts in `./bin/docker`
 
----
+- `./bin/up` -> Install docker images and start the services.
+- `./bin/stop` -> Stop all the services.
+- `./bin/watch` -> Monitor all services in real-time.
+- `./bin/teardown` -> Remove all docker containers and images.
 
-Things you may want to cover:
+### Setup
 
-* Ruby version
+- Start all the docker services.
+- Run the provided setup script:
+```
+./bin/setup
+```
 
-* System dependencies
+### Configuration
 
-* Configuration
+- You can override environment settings in the `.env` file.
 
-* Database creation
+### Run the application
 
-* Database initialization
+- Start the application:
+```
+foreman start
+```
+- Navigate to [http://localhost:3000](http://localhost:3000)
+- Login using the default user credentials:
+  - Email: `jim@example.com`
+  - Password: `Changeme1!`
 
-* How to run the test suite
+### Resetting data
 
-* Services (job queues, cache servers, search engines, etc.)
+- Run the provided rake task to prepare a clean dataset:
+```
+rake development:truncate_and_seed
+```
 
-* Deployment instructions
+### Running tests
 
-* ...
+- To run the test suite simply run:
+```
+rails test
+```
+- You can also run guard for TDD-style testing:
+```
+guard
+```
