@@ -61,3 +61,10 @@ rails test
 ```
 guard
 ```
+
+### Sample data
+
+- There are 2 sample data files provided for general use / experimentation:
+
+- `data/credit-cards.json` -> Sample JSON credit card data created at [generatedata.com](https://www.generatedata.com)
+- `data/moviedata.json` -> Sample JSON data file from the [AWS DynamoDB tutorial](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Ruby.02.html#GettingStarted.Ruby.02.01).
