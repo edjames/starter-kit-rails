@@ -224,6 +224,8 @@ GEM
       rack (>= 1.5.0)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.5, < 5)
+    sidekiq-failures (1.0.0)
+      sidekiq (>= 4.0.0)
     sidekiq-scheduler (3.0.0)
       redis (>= 3, < 5)
       rufus-scheduler (~> 3.2)
@@ -305,6 +307,7 @@ DEPENDENCIES
   rails (~> 5.2.2)
   sass-rails
   sidekiq
+  sidekiq-failures
   sidekiq-scheduler
   simple_form
   slim-rails
