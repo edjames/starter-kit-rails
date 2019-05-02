@@ -1,4 +1,4 @@
 :schedule:
-  skeleton:
+  starter-kit:
     every: 1m
-    class: SkeletonWorker
+    class: StarterKitWorker

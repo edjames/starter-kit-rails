@@ -3,18 +3,18 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
-  username: skeleton
-  password: skeleton
+  username: starter-kit
+  password: starter-kit
   port: 5432
 
 development:
   <<: *default
-  database: skeleton-dev
+  database: starter-kit-dev
 
 test:
   <<: *default
-  database: skeleton-test
+  database: starter-kit-test
 
 production:
   <<: *default
-  database: skeleton_production
+  database: starter-kit_production

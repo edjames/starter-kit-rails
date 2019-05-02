@@ -1,4 +1,4 @@
-class SkeletonWorker
+class StarterKitWorker
   include Sidekiq::Worker
 
   def perform(duration = 5)

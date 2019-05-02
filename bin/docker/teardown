@@ -2,9 +2,13 @@
 # teardown
 
 main() {
-  ./bin/stack/stop.sh
+  ./bin/docker/stop
 
-  docker rm -v skeleton-db  &> /dev/null
+  docker rm -v starter-kit-db  &> /dev/null
+  docker rm -v starter-kit-memcached  &> /dev/null
+  docker rm -v starter-kit-redis  &> /dev/null
+
+  docker volume rm starter-kit-redis-data  &> /dev/null
 }
 
 main

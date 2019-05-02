@@ -1,5 +1,5 @@
 {
-  "name": "skeleton",
+  "name": "starter-kit",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.0.0",

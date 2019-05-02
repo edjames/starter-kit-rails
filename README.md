@@ -1,4 +1,4 @@
-# Skeleton Application
+# StarterKit Application
 
 This is a starter Rails application with everything you need to properly bootstrap a useful Rails application. This is a fully self-contained application with backend stack.
 
