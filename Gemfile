@@ -24,7 +24,7 @@ gem 'webpacker'
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug'
-  gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'dotenv-rails', '~> 2.7.5', require: 'dotenv/rails-now'
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'growl'
