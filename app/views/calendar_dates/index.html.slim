@@ -26,6 +26,6 @@ h2
           td = number_with_delimiter(resource.epoch)
           td = resource.day_name
           td = resource.created_at
-          td = link_to 'Show', calendar_date_path(resource)
+          td = link_to 'Show', calendar_date_path(resource), id: "id-#{resource.id}"
 
   == pagy_bootstrap_nav(@pagy)
