@@ -29,8 +29,9 @@ group :development, :test do
   gem 'ffaker'
   gem 'growl'
   gem 'guard'
-  gem 'guard-minitest'
+  gem 'guard-rspec', require: false
   gem 'pry-byebug'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -43,6 +44,5 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'minitest-reporters'
   gem 'mocha'
 end
