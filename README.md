@@ -6,9 +6,8 @@ This is a starter Rails application with everything you need to properly bootstr
 
 You need to have the following installed before you can run this application:
 
+- Refer to the `.tool-versions` file for current Ruby / NodeJS versions.
 - [Docker for Mac](https://docs.docker.com/docker-for-mac/)
-- Ruby 2.6.3
-- Node 10.15.1
 
 [asdf](https://github.com/asdf-vm/asdf) is the recommended version manager for Ruby and Node.
 
