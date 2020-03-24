@@ -2,13 +2,13 @@
   "name": "starter-kit",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.6.2",
-    "@rails/actioncable": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "^4.0.7",
-    "babel-loader": "^8.0.6",
-    "bootstrap": "^4.3.1",
-    "caniuse-lite": "^1.0.30000697",
+    "@babel/core": "^7.9.0",
+    "@rails/actioncable": "^6.0.2",
+    "@rails/ujs": "^6.0.2",
+    "@rails/webpacker": "^4.2.2",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.4.1",
+    "caniuse-lite": "^1.0.30001036",
     "css-loader": "^2.1.1",
     "font-awesome": "^4.7.0",
     "fstream": "^1.0.12",
@@ -18,17 +18,17 @@
     "lodash.template": "^4.5.0",
     "mixin-deep": "^2.0.1",
     "moment": "^2.24.0",
-    "popper.js": "^1.15.0",
+    "popper.js": "^1.16.1",
     "postcss-cssnext": "^3.1.0",
     "set-value": "^3.0.1",
     "turbolinks": "^5.2.0",
-    "vue": "^2.6.10",
-    "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": ">=3.3.1"
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
