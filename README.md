@@ -15,6 +15,16 @@ You need to have the following installed before you can run this application:
 
 The backed services are configured in the `docker-compose.yml` file. These services are controlled via some convenience scripts in `./bin/docker`
 
+- Choose which version of PostgreSQL you want to use by copying the relevant config file:
+
+```
+# For Postgres 9:
+cp docker-compose-pg-9.yml docker-compose.yml
+
+# For Postgres 12:
+cp docker-compose-pg-12.yml docker-compose.yml
+```
+
 - `./bin/up` -> Install docker images and start the services.
 - `./bin/stop` -> Stop all the services.
 - `./bin/watch` -> Monitor all services in real-time.
@@ -29,7 +39,11 @@ The backed services are configured in the `docker-compose.yml` file. These servi
 ```
 - Seed the database:
 ```
-rake db:seed
+rake development:truncate_and_seed
+```
+- Start the app:
+```
+foreman start
 ```
 
 ### Configuration
