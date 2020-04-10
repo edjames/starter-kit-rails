@@ -1,6 +1,7 @@
 h2
   | Calendar dates
-  hr
+
+hr
 
 - if @collection.empty?
 
@@ -8,7 +9,7 @@ h2
 
 - else
 
-  table.table.table-striped.table-hover.table-sm
+  table.table.table-striped.table-bordered.table-hover
     thead
       tr
         th ID

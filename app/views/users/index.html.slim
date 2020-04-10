@@ -6,23 +6,29 @@
 
   hr
 
-  table.table.table-striped.table-bordered.table-hover
-    thead
-      tr
-        th Name
-        th Email
-        th
+  - if @collection.empty?
 
-    tbody
-      - @collection.each do |resource|
+    p No users found.
+
+  - else
+
+    table.table.table-striped.table-bordered.table-hover
+      thead
         tr
-          td= resource.name
-          td= mail_to(resource.email)
-          td
-            = link_to 'Show', user_path(resource)
-            | &nbsp;::&nbsp;
-            = link_to 'Edit', edit_user_path(resource)
-            | &nbsp;::&nbsp;
-            = link_to 'Delete', user_path(resource), method: :delete, data: { confirm: 'Are you sure you want to delete this user?' }
+          th Name
+          th Email
+          th
 
-  == pagy_bootstrap_nav(@pagy)
+      tbody
+        - @collection.each do |resource|
+          tr
+            td= resource.name
+            td= mail_to(resource.email)
+            td
+              = link_to 'Show', user_path(resource)
+              | &nbsp;::&nbsp;
+              = link_to 'Edit', edit_user_path(resource)
+              | &nbsp;::&nbsp;
+              = link_to 'Delete', user_path(resource), method: :delete, data: { confirm: 'Are you sure you want to delete this user?' }
+
+    == pagy_bootstrap_nav(@pagy)
