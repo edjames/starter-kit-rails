@@ -4,9 +4,10 @@ services:
   db:
     container_name: 'starter-kit-db'
     environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_PASSWORD=
       - POSTGRES_USER=postgres
-    image: postgres:9.6-alpine
+    image: postgres:12.2-alpine
     logging:
       options:
         max-size: '10m'
@@ -20,7 +21,7 @@ services:
 
   memcached:
     container_name: 'starter-kit-memcached'
-    image: memcached:1.5-alpine
+    image: memcached:1.6-alpine
     logging:
       options:
         max-size: '10m'
@@ -31,7 +32,7 @@ services:
 
   redis:
     container_name: 'starter-kit-redis'
-    image: redis:5.0.3-alpine
+    image: redis:5.0-alpine
     logging:
       options:
         max-size: '10m'
