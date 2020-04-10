@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :calendar_dates, only: %i[index show]
+  resources :scheduled_jobs
   resources :users
 
   root to: 'home#index'

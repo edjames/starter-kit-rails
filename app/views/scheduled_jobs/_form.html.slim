@@ -1,0 +1,20 @@
+h3 Scheduled Job Details
+
+hr
+
+.row
+  .col-md-9
+    = simple_form_for @resource, url: path do |f|
+
+      = f.input :job_class, hint: 'This is the class name of your job.'
+
+      = f.input :frequency_quantity
+      = f.input :frequency_period, collection: ScheduledJob::FREQUENCY_PERIODS
+
+      = f.input :at, placeholder: 'HH:MM',
+        hint: 'Optional. Specify an exact time for job execution.'
+
+      hr
+
+      = f.button :submit, 'Save'
+      = link_to 'Cancel', path, class: 'cancel'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_26_191458) do
+ActiveRecord::Schema.define(version: 2020_04_10_172106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 2019_09_26_191458) do
     t.boolean "weekend"
     t.datetime "created_at"
     t.index ["date_actual"], name: "index_calendar_dates_on_date_actual"
+  end
+
+  create_table "scheduled_jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "job_class"
+    t.integer "frequency_quantity"
+    t.string "frequency_period"
+    t.string "at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

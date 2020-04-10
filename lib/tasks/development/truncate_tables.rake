@@ -17,7 +17,7 @@ namespace :development do
     excluded_tables = %w[ar_internal_metadata schema_migrations]
     tables = DbHelper.all_tables - excluded_tables
 
-    tables.each do |table|
+    tables.sort.each do |table|
       puts "Truncating #{table} ... "
       ActiveRecord::Base.connection.execute("truncate table #{table} cascade")
     end
