@@ -27,6 +27,10 @@ The backed services are configured in the `docker-compose.yml` file. These servi
 ```
 ./bin/setup
 ```
+- Seed the database:
+```
+rake db:seed
+```
 
 ### Configuration
 
