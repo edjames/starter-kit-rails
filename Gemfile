@@ -8,6 +8,7 @@ gem 'bootsnap', require: false
 gem 'clockwork'
 gem 'dalli'
 gem 'devise'
+gem 'hirb'
 gem 'jbuilder'
 gem 'pagy'
 gem 'pg', '>= 0.18', '< 2.0'
