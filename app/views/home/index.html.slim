@@ -6,3 +6,27 @@
 
       p= link_to '#', class: 'btn btn-primary' do
         | Get started &raquo;
+
+  .container
+    table.table.table-striped.table-bordered.table-hover
+      thead
+        tr
+          th colspan=2 Status
+
+      tbody
+        tr
+          td Environment
+          td
+            code= @status.env
+        tr
+          td Server
+          td
+            code= @status.ip
+        tr
+          td Version
+          td
+            code= @status.version
+        tr
+          td Started
+          td
+            = @status.boot_time

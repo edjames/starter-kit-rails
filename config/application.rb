@@ -18,6 +18,14 @@ module StarterKit
 
     config.active_job.queue_adapter = :sidekiq
 
+    config.eager_load_paths << Rails.root.join('lib')
+    config.autoload_paths   << Rails.root.join('lib')
+
+    Dir['domain/*/'].each do |dir|
+      config.eager_load_paths << Rails.root.join("#{dir}/lib")
+      config.autoload_paths   << Rails.root.join("#{dir}/lib")
+    end
+
     # Cache store config
     if ENV['MEMCACHED_SERVER']
       options = {
