@@ -1,4 +1,4 @@
-# StarterKit Application
+# Starter Kit Application
 
 This is a starter Rails application with everything you need to properly bootstrap a useful Rails application. This is a fully self-contained application with backend stack.
 
@@ -68,11 +68,22 @@ foreman start
 rake development:truncate_and_seed
 ```
 
+### Checking Vue.js
+
+- [Vue.js](https://vuejs.org) is configured and loaded into the frontend.
+- There is a test component found at `app/javascript/packs/hello_vue.js`
+- Enable te component by uncommenting out these lines at the top of the `app/views/layouts/application.html.slim` layout file:
+```
+= stylesheet_pack_tag 'hello_vue'
+= javascript_pack_tag 'hello_vue'
+```
+- Reload the home page and you will see the component render a message under the page footer.
+
 ### Running tests
 
 - To run the test suite simply run:
 ```
-rails test
+rspec
 ```
 - You can also run guard for TDD-style testing:
 ```
@@ -86,3 +97,7 @@ guard
 - `data/credit-cards.json` -> Sample JSON credit card data created at [generatedata.com](https://www.generatedata.com)
 - `data/moviedata.json` -> Sample JSON data file from the [AWS DynamoDB tutorial](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Ruby.02.html#GettingStarted.Ruby.02.01)
 - `data/people.csv` -> Sample CSV data file from the [ConvertCSV](https://www.convertcsv.com/generate-test-data.htm)
+
+## License
+
+This starter kit is released under the [MIT License](https://opensource.org/licenses/MIT).
