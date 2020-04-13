@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe User, type: :model do
 
-  subject { build(:user) }
+  subject(:user) { build(:user) }
 
-  specify { expect(subject).to be_valid }
+  specify { expect(user).to be_valid }
 
 end
