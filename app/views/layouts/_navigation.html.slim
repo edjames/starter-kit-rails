@@ -4,26 +4,23 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
     span.navbar-toggler-icon
   #navbarsExampleDefault.collapse.navbar-collapse
     ul.navbar-nav.mr-auto
-      li.nav-item
-        a.nav-link href="#" Link 1
-      li.nav-item
-        a.nav-link href="#" Link 2
+      li.nav-item.dropdown
+        a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Admin
+        .dropdown-menu aria-labelledby="dropdown01"
+          = link_to 'Scheduled jobs', scheduled_jobs_path, class: 'dropdown-item'
+          = link_to 'Users', users_path, class: 'dropdown-item'
+          a.dropdown-item href="/pghero" target="blank" PgHero
+          a.dropdown-item href="/sidekiq" target="blank" Sidekiq
       li.nav-item.dropdown
         a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Data
         .dropdown-menu aria-labelledby="dropdown01"
           = link_to 'Calendar dates', calendar_dates_path, class: 'dropdown-item'
     ul.navbar-nav.ml-auto
       - if user_signed_in?
-        li.nav-item.dropdown
-          a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Admin
-          .dropdown-menu aria-labelledby="dropdown01"
-            = link_to 'Scheduled jobs', scheduled_jobs_path, class: 'dropdown-item'
-            = link_to 'Users', users_path, class: 'dropdown-item'
-            a.dropdown-item href="/pghero" target="blank" PgHero
-            a.dropdown-item href="/sidekiq" target="blank" Sidekiq
         li.nav-item
           = link_to destroy_user_session_path, class: 'nav-link' do
-            | Sign out
+            i.fa.fa-power-off.fa-lg
+            |  Sign out
       - else
         li.nav-item
           = link_to new_user_session_path, class: 'nav-link' do
