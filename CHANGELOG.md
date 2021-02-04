@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ---
 
+## <a name=1.0.2 /> Version 1.0.2 - (2020-05-11)
+
+- Fix UI
+
+---
+
+## <a name=1.0.1 /> Version 1.0.1 - (2020-05-11)
+
+- Rails 6.0.3
+- Minor package upgrades
+
+---
+
 ## <a name=1.0.0 /> Version 1.0.0 - (2020-04-13)
 
 - First version with the following basics:

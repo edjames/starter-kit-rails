@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
-gem 'rails', '~> 6.0.3.1'
+gem 'rails', '~> 6.1.1'
 
 gem 'bootsnap', require: false
 gem 'clockwork'
@@ -25,7 +25,7 @@ gem 'webpacker'
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug'
-  gem 'dotenv-rails', '~> 2.7.5', require: 'dotenv/rails-now'
+  gem 'dotenv-rails', '~> 2.7.6', require: 'dotenv/rails-now'
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'growl'
@@ -37,10 +37,12 @@ end
 
 group :development do
   gem 'foreman'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '~> 3.3'
+  # Display performance information such as SQL time and flame graphs for each request in your browser.
+  # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
+  gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 4.1.0'
 
   # code linting only
   gem 'rubocop', require: false
@@ -49,6 +51,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '>= 3.26'
   gem 'mocha'
 end
