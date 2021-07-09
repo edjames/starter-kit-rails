@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ---
 
+## <a name=1.3.0 /> Version 1.3.0 - (2021-07-09)
+
+- Ruby 3.0.0
+
 ## <a name=1.2.0 /> Version 1.2.0 - (2021-06-07)
 
 - Upgrade to Rails 6.1.3.2
