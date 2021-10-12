@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
+gem 'rails', '~> 6.1.3'
 
 gem 'bootsnap', require: false
 gem 'clockwork'
@@ -11,7 +11,7 @@ gem 'devise'
 gem 'hirb'
 gem 'jbuilder'
 gem 'pagy'
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg'
 gem 'pghero'
 gem 'puma'
 gem 'sass-rails'
@@ -42,7 +42,7 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
-  gem 'web-console', '>= 4.1.0'
+  gem 'web-console'
 
   # code linting only
   gem 'rubocop', require: false
