@@ -11,19 +11,17 @@ You need to have the following installed before you can run this application:
 
 [asdf](https://github.com/asdf-vm/asdf) is the recommended version manager for Ruby and Node.
 
-### Backend / Docker scripts
+### Backend
 
-The backed services are configured in the `docker-compose.yml` file. These services are controlled via some convenience scripts in `./bin/docker`
+Backend services defined in the `docker-compose.yml` are:
 
-- Choose which version of PostgreSQL you want to use by copying the relevant config file:
+- Postgres `13.4`
+- Redis `6`
+- Mmemcached `1.6`
 
-```
-# For Postgres 9:
-cp docker-compose-pg-9.yml docker-compose.yml
+### Docker scripts
 
-# For Postgres 12:
-cp docker-compose-pg-12.yml docker-compose.yml
-```
+The backed services are configured in the `docker-compose.yml` file. These services are controlled via some convenience scripts in `./bin/docker`:
 
 - `./bin/up` -> Install docker images and start the services.
 - `./bin/stop` -> Stop all the services.
