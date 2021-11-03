@@ -9,7 +9,6 @@
 
 # Ignore local files
 Procfile.*
-VERSION
 
 # Ignore all logfiles and tempfiles.
 /log/*

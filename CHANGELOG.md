@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ---
 
+## <a name=1.4.0 /> Version 1.4.0 - (2021-11-03)
+
+- (NT) Update and fix backend services to latest versions
+- Bump puma from 5.5.0 to 5.5.1
+- Bump url-parse from 1.5.1 to 1.5.3
+- Bump path-parse from 1.0.6 to 1.0.7
+- Bump ssri from 6.0.1 to 6.0.2
+- Gem updates
+
 ## <a name=1.3.0 /> Version 1.3.0 - (2021-07-09)
 
 - Ruby 3.0.0
