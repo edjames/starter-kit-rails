@@ -2,36 +2,38 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '~> 7.0.1'
 
 gem 'bootsnap', require: false
 gem 'clockwork'
 gem 'dalli'
 gem 'devise'
 gem 'hirb'
+gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pagy'
 gem 'pg'
 gem 'pghero'
 gem 'puma'
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'turbo-rails'
+gem 'stimulus-rails'
+gem 'sprockets-rails'
 gem 'uglifier'
-gem 'webpacker'
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'byebug'
+  gem 'debug'
   gem 'dotenv-rails', '~> 2.7.6', require: 'dotenv/rails-now'
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'growl'
   gem 'guard'
   gem 'guard-rspec', require: false
-  gem 'pry-byebug'
   gem 'rspec-rails'
 end
 
@@ -51,6 +53,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 3.26'
+  gem 'capybara'
   gem 'mocha'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end

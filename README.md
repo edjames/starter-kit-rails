@@ -9,7 +9,33 @@ You need to have the following installed before you can run this application:
 - Refer to the `.tool-versions` file for current Ruby / NodeJS versions.
 - [Docker for Mac](https://docs.docker.com/docker-for-mac/)
 
-[asdf](https://github.com/asdf-vm/asdf) is the recommended version manager for Ruby and Node.
+[asdf](https://github.com/asdf-vm/asdf) is the recommended version manager for Ruby.
+
+<details>
+ <summary>Installing pg gem on macOS</summary>
+
+If you're trying to install the postgresql gem `pg` and it is failing with the following error message:
+
+```
+Installing pg 1.2.3 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: ~/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/pg-1.2.3/ext
+~/.rbenv/versions/3.0.0/bin/ruby -I ~/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210125-97201-pycpo.rb extconf.rb
+checking for pg_config... no
+No pg_config... trying anyway. If building fails, please try again with
+ --with-pg-config=/path/to/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+```
+
+The following helped me resolve the issue without having to install the entire postgresql as recommended in the stop Stack Overflow post (already using it in a Docker container):
+
+```
+brew install libpq
+gem install pg -- --with-pg-config=/usr/local/opt/libpq/bin/pg_config
+```
+</details>
 
 ### Backend
 
@@ -65,17 +91,6 @@ foreman start
 ```
 rake development:truncate_and_seed
 ```
-
-### Checking Vue.js
-
-- [Vue.js](https://vuejs.org) is configured and loaded into the frontend.
-- There is a test component found at `app/javascript/packs/hello_vue.js`
-- Enable te component by uncommenting out these lines at the top of the `app/views/layouts/application.html.slim` layout file:
-```
-= stylesheet_pack_tag 'hello_vue'
-= javascript_pack_tag 'hello_vue'
-```
-- Reload the home page and you will see the component render a message under the page footer.
 
 ### Running tests
 

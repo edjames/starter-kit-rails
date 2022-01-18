@@ -2,17 +2,7 @@ doctype html
 html lang="en" class="h-100"
 
   head
-    meta charset="utf-8"
-    meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'
-    = action_cable_meta_tag
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application'
-
-    / = stylesheet_pack_tag 'hello_vue'
-    / = javascript_pack_tag 'hello_vue'
-
+    = render 'layouts/head'
     title Starter Kit
 
   body.d-flex.flex-column.h-100
