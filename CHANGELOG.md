@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ---
 
+## <a name=2.0.1 /> Version 2.0.1 - (2022-05-16)
+
+- (NT) Fix broken rsource delete links for Turbo
+- (NT) Update binstubs
+- (NT) Remove yarn and webpack
+- (NT) Update ./bin
+- (NT) Fix broken Gemfile.lock; Remove deprecation warning
+- Bump nokogiri from 1.13.1 to 1.13.6
+- Bump nokogiri from 1.13.1 to 1.13.4
+- Bump puma from 5.5.2 to 5.6.4
+- Bump sidekiq from 6.3.1 to 6.4.0
+- Bump follow-redirects from 1.14.5 to 1.14.7
+
+## <a name=2.0.0 /> Version 2.0.0 - (2022-01-18)
+
+- (NT) Rails 7.0.1
+- (NT) Javascript package updates
+
+---
+
 ## <a name=1.4.0 /> Version 1.4.0 - (2021-11-03)
 
 - (NT) Update and fix backend services to latest versions
