@@ -15,7 +15,7 @@ class ScheduledJobsController < ApplicationController
 
   def create
     build_resource
-    save_resource or render :new
+    save_resource or render :new, status: :unprocessable_entity
   end
 
   def edit
@@ -25,7 +25,7 @@ class ScheduledJobsController < ApplicationController
   def update
     load_resource
     build_resource
-    save_resource or render :edit
+    save_resource or render :edit, status: :unprocessable_entity
   end
 
   def destroy
@@ -59,7 +59,7 @@ class ScheduledJobsController < ApplicationController
 
   def destroy_resource
     return unless @resource.destroy
-    redirect_to users_path, notice: 'Scheduled job successfully deleted.'
+    redirect_to scheduled_jobs_path, notice: 'Scheduled job successfully deleted.', status: 303
   end
 
   def resource_params

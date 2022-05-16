@@ -27,4 +27,5 @@ hr
 | &nbsp;::&nbsp;
 = link_to 'Edit', edit_user_path(@resource)
 | &nbsp;::&nbsp;
-= link_to 'Delete', user_path(@resource), method: :delete, data: { confirm: 'Are you sure you want to delete this user?' }
+= link_to 'Delete', user_path(@resource),
+  data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this user?' }

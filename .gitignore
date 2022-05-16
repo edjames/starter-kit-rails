@@ -9,6 +9,7 @@
 
 # Ignore local files
 Procfile.*
+.foreman*
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -23,9 +24,6 @@ Procfile.*
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/node_modules
-/yarn-error.log
-
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
@@ -37,13 +35,3 @@ Procfile.*
 /db/postgres/*
 /public/packs
 /public/packs-test
-/node_modules
-yarn-debug.log*
-.yarn-integrity
-
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity

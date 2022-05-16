@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def create
     build_resource
-    save_resource or render :new
+    save_resource or render :new, status: :unprocessable_entity
   end
 
   def edit
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     end
     load_resource
     build_resource
-    save_resource or render :edit
+    save_resource or render :edit, status: :unprocessable_entity
   end
 
   def destroy
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
   def destroy_resource
     return unless @resource.destroy
-    redirect_to users_path, notice: 'User successfully deleted.'
+    redirect_to users_path, notice: 'User successfully deleted.', status: 303
   end
 
   def resource_params
