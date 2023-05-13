@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ---
 
+## <a name=2.0.2 /> Version 2.0.2 - (2023-05-13)
+
+- (NT) Open PG and Sidekiq admin console tabs in new windows
+- Docker version updates: pg 15.3; Redis 7.0
+- Massive gem update
+- Bump rack from 2.2.3 to 2.2.3.1
+
+---
+
 ## <a name=2.0.1 /> Version 2.0.1 - (2022-05-16)
 
 - (NT) Fix broken rsource delete links for Turbo
