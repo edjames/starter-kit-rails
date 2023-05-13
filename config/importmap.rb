@@ -8,3 +8,6 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 
 pin "bootstrap", to: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js', preload: true
 pin 'jquery', to: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', preload: true
+
+pin "@rails/actioncable", to: "actioncable.esm.js"
+pin_all_from "app/javascript/channels", under: "channels"
