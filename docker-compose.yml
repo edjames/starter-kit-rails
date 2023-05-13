@@ -7,7 +7,7 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_PASSWORD=
       - POSTGRES_USER=postgres
-    image: postgres:13.4-alpine
+    image: postgres:15.3-alpine
     logging:
       options:
         max-size: '10m'
@@ -32,7 +32,7 @@ services:
 
   redis:
     container_name: 'starter-kit-redis'
-    image: redis:6.2-alpine
+    image: redis:7.0-alpine
     logging:
       options:
         max-size: '10m'
