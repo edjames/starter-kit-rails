@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ---
 
+## <a name=2.1.0 /> Version 2.1.0 - (2023-05-13)
+
+- ActionCable operational with simple broadcast to home page
+- Add LoudLogger
+
+---
+
 ## <a name=2.0.2 /> Version 2.0.2 - (2023-05-13)
 
 - (NT) Open PG and Sidekiq admin console tabs in new windows
