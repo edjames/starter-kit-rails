@@ -32,7 +32,7 @@ services:
 
   redis:
     container_name: 'starter-kit-redis'
-    image: redis:7.0-alpine
+    image: redis:7.2-alpine
     logging:
       options:
         max-size: '10m'
