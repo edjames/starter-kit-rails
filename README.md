@@ -41,9 +41,9 @@ gem install pg -- --with-pg-config=/usr/local/opt/libpq/bin/pg_config
 
 Backend services defined in the `docker-compose.yml` are:
 
-- Postgres `13.4`
-- Redis `6`
-- Mmemcached `1.6`
+- Postgres `15.3`
+- Redis `7.2`
+- Memcached `1.6`
 
 ### Docker scripts
 
