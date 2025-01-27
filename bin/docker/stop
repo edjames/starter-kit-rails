@@ -3,7 +3,7 @@
 
 main() {
   # Bring 'er down!
-  docker-compose stop
+  docker compose stop
 }
 
 main
