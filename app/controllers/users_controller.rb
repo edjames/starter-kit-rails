@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  include Pagy::Backend
-
   def index
     load_collection
   end
@@ -44,7 +42,8 @@ class UsersController < ApplicationController
   end
 
   def load_collection
-    @pagy, @collection = pagy(resource_scope.ordered)
+    # @pagy, @collection = pagy(resource_scope.ordered)
+    @pagy, @collection = pagy(:countish, resource_scope.ordered, ttl: 300)
   end
 
   def load_resource

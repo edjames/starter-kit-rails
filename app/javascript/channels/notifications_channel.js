@@ -1,6 +1,6 @@
 import consumer from "channels/consumer"
 
-consumer.subscriptions.create("NotificationsChannel", {
+consumer.subscriptions.create({ channel: "NotificationsChannel" }, {
   connected() {
     // Called when the subscription is ready for use on the server
     console.log("Connected to the channel:", this);

@@ -11,9 +11,16 @@ Rails.application.routes.draw do
   end
 
   resources :calendar_dates, only: %i[index show]
-  resources :scheduled_jobs
+  resources :scheduled_jobs do
+    member do
+      post :invoke
+    end
+  end
   resources :users
 
-  root to: 'home#index'
+  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
+  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
+  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
+  root to: 'home#index'
 end

@@ -140,7 +140,7 @@ SimpleForm.setup do |config|
   # horizontal forms
   #
   # horizontal default_wrapper
-  config.wrappers :horizontal_form, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  config.wrappers :horizontal_form, tag: 'div', class: 'row mb-3', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength

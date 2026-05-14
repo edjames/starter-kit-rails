@@ -1,61 +1,71 @@
-source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source "https://rubygems.org"
 
-ruby '3.2.2'
-gem 'rails', '~> 7.1.2'
+ruby "4.0.1"
+gem "rails", "~> 8.1.3"
 
-gem 'bootsnap', require: false
-gem 'clockwork'
-gem 'dalli'
-gem 'devise'
-gem 'hirb'
-gem 'importmap-rails'
-gem 'jbuilder'
-gem 'pagy'
-gem 'pg'
-gem 'pghero'
-gem 'puma'
-gem 'redis'
-gem 'sassc-rails'
-gem 'sidekiq'
-gem 'sidekiq-failures'
-gem 'simple_form'
-gem 'slim-rails'
-gem 'turbo-rails'
-gem 'stimulus-rails'
-gem 'sprockets-rails'
-gem 'uglifier'
+gem "bootsnap", require: false
+gem "clockwork"
+gem "dalli"
+gem "devise"
+gem "image_processing", "~> 1.2"
+gem "importmap-rails"
+gem "jbuilder"
+gem "pagy"
+gem "pg"
+gem "pghero"
+gem "propshaft"
+gem "puma"
+gem "redis"
+gem "sidekiq"
+gem "sidekiq-failures"
+gem "simple_form"
+gem "slim-rails"
+gem "solid_cable"
+gem "solid_cache"
+gem "solid_queue"
+gem "sqlite3", ">= 2.1"
+gem "stimulus-rails"
+gem "turbo-rails"
+
+# Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
+gem "kamal", require: false
+
+# Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
+gem "thruster", require: false
 
 group :development, :test do
-  gem 'awesome_print'
-  gem 'debug'
-  gem 'dotenv-rails', '~> 2.7.6', require: 'dotenv/rails-now'
-  gem 'factory_bot_rails'
-  gem 'ffaker'
-  gem 'growl'
-  gem 'guard'
-  gem 'guard-rspec', require: false
-  gem 'rspec-rails'
+  gem "awesome_print"
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "dotenv-rails", require: "dotenv/load"
+  gem "bundler-audit", require: false
+  gem "brakeman", require: false
+  gem "factory_bot_rails"
+  gem "ffaker"
+  gem "growl"
+  gem "guard"
+  gem "guard-rspec", require: false
+  gem "rspec-rails"
+
+  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem "rubocop-rails-omakase", require: false
 end
 
 group :development do
-  gem 'foreman'
-  gem 'listen', '~> 3.3'
+  gem "foreman"
+  gem "listen"
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
-  gem 'spring'
-  gem 'web-console'
+  gem "rack-mini-profiler"
+  gem "spring"
+  gem "web-console"
 
   # code linting only
-  gem 'rubocop', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
 end
 
 group :test do
-  gem 'capybara'
-  gem 'mocha'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem "capybara"
+  gem "selenium-webdriver"
 end

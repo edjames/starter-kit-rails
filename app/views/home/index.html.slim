@@ -1,37 +1,39 @@
 - content_for :jumbotron do
-  .jumbotron
+  .p-4.mb-4.bg-body-tertiary.rounded-3
     .container
-      h1.display-3
+      h1.display-5.fw-bold
         | Starter Kit
-
+      p.col-md-8.fs-4
+        | This is the Starter Kit for Rails 8, a default application-ready setup that includes all the boilerplate you need to get working on the important things as quickly as possible.
       p= link_to '#', class: 'btn btn-primary' do
         | Get started &raquo;
 
 .container
-  table.table.table-striped.table-bordered.table-hover
-    thead
-      tr
-        th colspan=2 Status
+  .col-md-8
+    table.table.table-striped.table-bordered.table-hover
+      thead
+        tr
+          th colspan=2 Status
 
-    tbody
-      tr
-        td Environment
-        td
-          code= @status.env
-      tr
-        td Server
-        td
-          code= @status.ip
-      tr
-        td Version
-        td
-          code= @status.version
-      tr
-        td Started
-        td
-          = @status.boot_time
-      tr
-        td
-          #action-cable-label Current time (ActionCable pending)
-        td
-          #action-cable-time
+      tbody
+        tr
+          td Environment
+          td
+            code= @status.env
+        tr
+          td Server
+          td
+            code= @status.ip
+        tr
+          td Version
+          td
+            code= @status.version
+        tr
+          td Started
+          td
+            = @status.boot_time
+        tr
+          td
+            #action-cable-label Current time (ActionCable pending)
+          td
+            #action-cable-time

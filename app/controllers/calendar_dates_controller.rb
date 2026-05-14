@@ -1,6 +1,4 @@
 class CalendarDatesController < ApplicationController
-  include Pagy::Backend
-
   def index
     load_collection
   end

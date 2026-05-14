@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "# StarterKit App config:" >> /var/lib/postgresql/data/postgresql.conf
-echo "shared_preload_libraries = 'pg_stat_statements'" >> /var/lib/postgresql/data/postgresql.conf
+echo "# StarterKit App config:" >> /var/lib/postgresql/18/docker/postgresql.conf
+echo "shared_preload_libraries = 'pg_stat_statements'" >> /var/lib/postgresql/18/docker/postgresql.conf
 
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
   CREATE USER root SUPERUSER;

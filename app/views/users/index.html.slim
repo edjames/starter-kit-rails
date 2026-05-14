@@ -1,7 +1,7 @@
 .container
   h2
     | Users
-    .float-right
+    .float-end
       = link_to 'Create', new_user_path, class: 'btn btn-sm btn-outline-primary'
 
   hr
@@ -32,4 +32,6 @@
               = link_to 'Delete', user_path(resource),
                 data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this user?' }
 
-    == pagy_bootstrap_nav(@pagy)
+    == @pagy.series_nav(:bootstrap)
+    == @pagy.series_nav_js(:bootstrap)
+    == @pagy.info_tag

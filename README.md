@@ -17,7 +17,7 @@ You need to have the following installed before you can run this application:
 If you're trying to install the postgresql gem `pg` and it is failing with the following error message:
 
 ```
-Installing pg 1.2.3 with native extensions
+Installing pg 1.* with native extensions
 Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
 
     current directory: ~/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/pg-1.2.3/ext
@@ -41,8 +41,8 @@ gem install pg -- --with-pg-config=/usr/local/opt/libpq/bin/pg_config
 
 Backend services defined in the `docker-compose.yml` are:
 
-- Postgres `15.3`
-- Redis `7.2`
+- Postgres `18.3`
+- Valkey `9.0`
 - Memcached `1.6`
 
 ### Docker scripts
@@ -97,10 +97,6 @@ rake development:truncate_and_seed
 - To run the test suite simply run:
 ```
 rspec
-```
-- You can also run guard for TDD-style testing:
-```
-guard
 ```
 
 ### Sample data

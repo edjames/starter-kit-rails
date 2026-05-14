@@ -1,6 +1,4 @@
 class ScheduledJobsController < ApplicationController
-  include Pagy::Backend
-
   def index
     load_collection
   end
@@ -26,6 +24,12 @@ class ScheduledJobsController < ApplicationController
     load_resource
     build_resource
     save_resource or render :edit, status: :unprocessable_entity
+  end
+
+  def invoke
+    load_resource
+    @resource.invoke!
+    redirect_to scheduled_jobs_path, notice: "Scheduled job successfully invoked: #{@resource.job_class}"
   end
 
   def destroy

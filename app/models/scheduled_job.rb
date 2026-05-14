@@ -1,5 +1,4 @@
 class ScheduledJob < ActiveRecord::Base
-
   FREQUENCY_PERIODS = %i[seconds minutes hours days weeks months].freeze
 
   validates :job_class, :frequency_quantity, :frequency_period,
@@ -9,4 +8,7 @@ class ScheduledJob < ActiveRecord::Base
     frequency_quantity.send(frequency_period)
   end
 
+  def invoke!
+    job_class.constantize.perform_async
+  end
 end

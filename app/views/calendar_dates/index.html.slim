@@ -29,4 +29,6 @@ hr
           td = resource.created_at
           td = link_to 'Show', calendar_date_path(resource), id: "id-#{resource.id}"
 
-  == pagy_bootstrap_nav(@pagy)
+  == @pagy.series_nav(:bootstrap)
+  == @pagy.series_nav_js(:bootstrap)
+  == @pagy.info_tag

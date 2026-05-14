@@ -1,8 +1,8 @@
-StarterKit::BOOT_TIME = Time.now.utc
+StarterKitRails::BOOT_TIME = Time.now.utc
 
 file = File.join(Rails.root, 'VERSION')
 
-StarterKit::VERSION = if File.exist?(file)
+StarterKitRails::VERSION = if File.exist?(file)
   File.read(file).strip!
 else
   'development build'

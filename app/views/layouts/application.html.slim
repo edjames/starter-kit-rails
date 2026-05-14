@@ -14,17 +14,13 @@ html lang="en" class="h-100"
     .container
       - if flash.notice
         div.alert.alert-success.alert-dismissible.fade.show
-          button.close data-dismiss='alert'
-            span
-              | &times;
+          button.btn-close data-bs-dismiss='alert'
           strong Success!
           | &nbsp;
           = flash.notice
       - if flash.alert
         div.alert.alert-danger.alert-dismissible.fade.show
-          button.close data-dismiss='alert'
-            span
-              | &times;
+          button.btn-close data-bs-dismiss='alert'
           strong Oops!
           | &nbsp;
           = flash.alert

@@ -1,27 +1,30 @@
-nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-primary
-  = link_to 'Starter Kit', root_path, class: 'navbar-brand'
-  button.navbar-toggler aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarsExampleDefault" data-toggle="collapse" type="button"
-    span.navbar-toggler-icon
-  #navbarsExampleDefault.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
-      li.nav-item.dropdown
-        a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Admin
-        .dropdown-menu aria-labelledby="dropdown01"
-          = link_to 'Scheduled jobs', scheduled_jobs_path, class: 'dropdown-item'
-          = link_to 'Users', users_path, class: 'dropdown-item'
-          a.dropdown-item href="/pghero" target="_blank" PgHero
-          a.dropdown-item href="/sidekiq" target="_blank" Sidekiq
-      li.nav-item.dropdown
-        a#dropdown01.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"  Data
-        .dropdown-menu aria-labelledby="dropdown01"
-          = link_to 'Calendar dates', calendar_dates_path, class: 'dropdown-item'
-    ul.navbar-nav.ml-auto
-      - if user_signed_in?
-        li.nav-item
-          = link_to destroy_user_session_path, class: 'nav-link' do
-            i.fa.fa-power-off.fa-lg
-            |  Sign out
-      - else
-        li.nav-item
-          = link_to new_user_session_path, class: 'nav-link' do
-            | Sign in
+nav.navbar.navbar-expand-lg.bg-body-tertiary.fixed-top data-bs-theme="dark"
+  .container-fluid
+    = link_to 'Starter Kit', root_path, class: 'navbar-brand'
+    button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
+            |  Admin
+          ul.dropdown-menu
+            li = link_to 'Calendar dates', calendar_dates_path, class: 'dropdown-item'
+            li = link_to 'Scheduled jobs', scheduled_jobs_path, class: 'dropdown-item'
+            li = link_to 'Users', users_path, class: 'dropdown-item'
+            li
+              a.dropdown-item href="/pghero" target="_blank" PgHero
+            li
+              a.dropdown-item href="/sidekiq" target="_blank" Sidekiq
+      form.d-flex[role="search"]
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0
+          li.nav-item
+            - if user_signed_in?
+              li.nav-item
+                = link_to destroy_user_session_path, class: 'nav-link' do
+                  i.fa.fa-power-off.fa-lg
+                  |  Sign out
+            - else
+              li.nav-item
+                = link_to new_user_session_path, class: 'nav-link' do
+                  | Sign in
